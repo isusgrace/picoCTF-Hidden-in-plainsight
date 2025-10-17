@@ -90,7 +90,7 @@ steghide --extract -sf img.jpg -p pAzzword
 • steghide
   โปรแกรมสำหรับซ่อน/ดึงข้อมูลจากไฟล์ (steganography tool) — รองรับไฟล์เช่น JPEG, WAV, BMP, AU เป็นต้น
 • --extract
-  บอก steghide ว่าให้ดึง (extract) ข้อมูลที่ถูกซ่อนไว้ในไฟล์เป้าหมายออกมา
+  บอก steghide ว่าให้ดึงข้อมูลที่ถูกซ่อนไว้ในไฟล์เป้าหมายออกมา
 • -sf img.jpg
   -sf ย่อมาจาก stegofile — ระบุชื่อไฟล์ที่มีข้อมูลถูกซ่อนอยู่ ในที่นี้คือ img.jpg
 • -p pAzzword
@@ -111,3 +111,11 @@ XXXXX ไม่ใช้ flag นะ คือปิดไว้ จะได้
 เพิ่มเติม
 - ที่ใช้ exiftool เพราะ Hints บอกว่า "Download the jpg image and read its metadata" แปลว่า "ดาวน์โหลดภาพ jpg และอ่านข้อมูลเมตา"
 - ที่ใช้ steghide เพราะถอดรหัสจาก "c3RlZ2hpZGU6Y0VGNmVuZHZjbVE9" แล้วได้ "steghide:cEF6endvcmQ=" เราเลยรู้ว่ามีการใช้ steghide
+```
+echo -n "ข้อความของคุณ" | base64
+```
+คำสั่งนี้ใช้สำหรับเข้ารหัสข้อความด้วย Base64
+```
+echo "ข้อความของคุณ" | base64 -d
+```
+คำสั่งนี้ใช้สำหรับถอดรหัสข้อความที่ถูกเข้ารหัสด้วย Base64
